@@ -1,6 +1,8 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const questions = require("./lib/questions");
+
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -23,6 +25,21 @@ const render = require("./lib/htmlRenderer");
 // `output` folder. You can use the variable `outputPath` above target this location.
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
+
+function init() {
+    inquirer.prompt(questions).then(response => {
+      console.log(response);
+      // fs.writeFile("team.html", data , (err) => {
+      //   if (err) {
+      //     console.error(err);
+      //   } else {
+      //     console.log("succcess");
+      //   }
+      // });
+    });
+  }
+  
+  init();
 
 // HINT: each employee type (manager, engineer, or intern) has slightly different
 // information; write your code to ask different questions via inquirer depending on
