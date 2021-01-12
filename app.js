@@ -26,16 +26,19 @@ const render = require("./lib/htmlRenderer");
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
 
+const team = [];
+
 function init() {
     inquirer.prompt(questions).then(response => {
       console.log(response);
-      // fs.writeFile("team.html", data , (err) => {
-      //   if (err) {
-      //     console.error(err);
-      //   } else {
-      //     console.log("succcess");
-      //   }
-      // });
+      fs.writeFile("./output/team.html", render(team) , (err) => {
+        if (err) {
+          console.error(err);
+        } else {
+          console.log("team page created");
+        }
+      });
+      return;
     });
   }
   
