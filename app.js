@@ -70,6 +70,7 @@ function buildTeam() {
         fs.mkdirSync(OUTPUT_DIR);
       }
       fs.writeFileSync(outputPath, render(team));
+      console.log("Team Page successfully generated! Check the output folder.")
     }
   });
 }
