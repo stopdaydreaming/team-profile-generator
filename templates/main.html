@@ -11,22 +11,40 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      .hero {
+        background: url("../assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        color: #fff;
+      }
+      .bg-warm {
+        background: #f6f6f6;
+      }
+      .card {
+        min-width: auto !important;
+      }
+    </style>
+
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
   </head>
 
-  <body>
+  <body class="bg-warm">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 jumbotron mb-3 team-heading bg-warning">
-          <h1 class="text-center">My Team</h1>
+        <div class="col-12 jumbotron mb-3 team-heading hero">
+          <h1 class="text-center">Engineering Team</h1>
         </div>
       </div>
     </div>
+
     <div class="container">
       <div class="row">
         <div class="team-area col-12 d-flex justify-content-center">
-            {{ team }}
+          {{ team }}
         </div>
       </div>
     </div>

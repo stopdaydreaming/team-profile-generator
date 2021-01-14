@@ -1,0 +1,13 @@
+.hero {
+    background: url("../assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color: #fff;
+  }
+  .bg-warm {
+    background: #f6f6f6;
+  }
+  .card {
+    min-width: auto !important;
+  }

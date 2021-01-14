@@ -33,14 +33,6 @@ function askManager() {
 
 function buildTeam() {
   inquirer.prompt(questions).then(response => {
-    // if (response.role === "Manager") {
-    //   inquirer.prompt(questionsManager).then(answerM => {
-    //     team.push(
-    //       new Manager(answerM.name, answerM.id, answerM.email, answerM.officeNumber)
-    //     );
-    //     buildTeam();
-    //   });
-    // } else 
     if (response.role === "Engineer") {
       inquirer.prompt(questionsEngineer).then(answerE => {
         team.push(
