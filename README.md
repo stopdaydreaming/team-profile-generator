@@ -22,8 +22,8 @@ A command-line application that generates a high quality team profile html page.
 1. Click the "VIEW SITE" link at the bottom of this README
 
 ## Usage 
-This code should be used for the purpose of creating/editing code for a README generator. This code has not been deployed to a live site. It must be run locally.  
-![team profile page generator](screenshot.png)
+This code should be used for the purpose of creating/editing code for a Team Page generator. This code has not been deployed to a live site. It must be run locally.  
+![team profile page generator](./screenshot.png)
 
 
 ## Credits
