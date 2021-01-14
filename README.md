@@ -28,6 +28,7 @@ This code should be used for the purpose of creating/editing code for a Team Pag
 
 ## Credits
 1 contributor: @stopdaydreaming  
+Special thanks to my amazing tutor.
 
 ## License
 Copyright (c) Team Profile Page Generator. All rights reserved.
