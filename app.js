@@ -2,6 +2,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const {
+  manager,
   questions,
   questionsManager,
   questionsEngineer,
@@ -19,16 +20,28 @@ const render = require("./lib/htmlRenderer");
 
 const team = [];
 
+function askManager() {
+  inquirer.prompt(manager).then( response => {
+    inquirer.prompt(questionsManager).then(answerM => {
+      team.push(
+        new Manager(answerM.name, answerM.id, answerM.email, answerM.officeNumber)
+      );
+      buildTeam();
+    });
+  });
+}
+
 function buildTeam() {
   inquirer.prompt(questions).then(response => {
-    if (response.role === "Manager") {
-      inquirer.prompt(questionsManager).then(answerM => {
-        team.push(
-          new Manager(answerM.name, answerM.id, answerM.email, answerM.officeNumber)
-        );
-        buildTeam();
-      });
-    } else if (response.role === "Engineer") {
+    // if (response.role === "Manager") {
+    //   inquirer.prompt(questionsManager).then(answerM => {
+    //     team.push(
+    //       new Manager(answerM.name, answerM.id, answerM.email, answerM.officeNumber)
+    //     );
+    //     buildTeam();
+    //   });
+    // } else 
+    if (response.role === "Engineer") {
       inquirer.prompt(questionsEngineer).then(answerE => {
         team.push(
           new Engineer(answerE.name, answerE.id, answerE.email, answerE.github)
@@ -52,4 +65,4 @@ function buildTeam() {
   });
 }
 
-buildTeam();
+askManager();
