@@ -23,7 +23,10 @@ A command-line application that generates a high quality team profile html page.
 
 ## Usage 
 This code should be used for the purpose of creating/editing code for a Team Page generator. This code has not been deployed to a live site. It must be run locally.  
-![team profile page generator](./screenshot.png)
+### Generator Screenshot  
+![team profile page generator](./screenshot.png)  
+### Team Page Screenshot  
+![team profile page generator](./screenshot2.png)
 
 
 ## Credits
